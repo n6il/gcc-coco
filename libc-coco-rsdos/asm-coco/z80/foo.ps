@@ -1,0 +1,613 @@
+%!PS-Adobe-1.0
+%%Creator: SunOS:cmcmanis (Chuck McManis)
+%%Title: tconst.LST
+%%CreationDate: Mon Feb  7 13:32:56 1994
+%%DocumentFonts: Courier-Bold Courier
+% Start of enscript.pro -- prolog for text file translator
+% Copyright (c) 1984,1985,1987 Adobe Systems Incorporated. All Rights Reserved. 
+% GOVERNMENT END USERS: See Notice file in TranScript library directory
+% -- probably /usr/lib/ps/Notice
+% RCSID: $Header: /cvsroot-fuse/gcc-coco/libc-coco-rsdos/asm-coco/z80/foo.ps,v 1.1.1.1 2003/03/08 13:52:25 skwirl42 Exp $
+save/EnscriptJob exch def
+/StartEnscriptDoc{$enscript begin}def
+/$enscript 50 dict def $enscript begin
+/EndEnscriptDoc{end}def
+/S/show load def
+/X{exch 0 rmoveto S}def
+/Y{exch 0 exch rmoveto S}def
+/B{3 1 roll moveto S}def
+/F{$fd exch get setfont}def
+/StartPage{/svpg save def .05 dup scale}def
+/EndPage{svpg restore showpage}def
+/DoPreFeed{/statusdict where{pop
+ statusdict/prefeed known{statusdict exch/prefeed exch put 0}if}if pop}def
+/Landscape{90 rotate 0 -15840 translate}def
+/SetStTime{statusdict /manualfeedtimeout 120 put} def
+/SetStatus{statusdict /manualfeed true put
+   statusdict /product get (LaserWriter) eq 
+   {version (23.0) eq  % Don't redefine EndPage if printer is not "Classic LW"
+     {/EndPage {svpg restore
+	 {statusdict /printerstatus get exec 16#22000000 and 0 eq{exit}if}loop
+	 showpage}def}if }if}def
+
+
+/ISO-Latin-1 [
+/.notdef /.notdef /.notdef /.notdef /.notdef  /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef  /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef  /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef  /.notdef /.notdef /.notdef
+/space /exclam   /quotedbl   /numbersign   /dollar  /percent  /ampersand
+/quoteright /parenleft   /parenright  /asterisk   /plus  /comma  /hyphen
+/period /slash  /zero /one  /two /three  /four /five  /six /seven /eight
+/nine /colon /semicolon /less /equal /greater /question /at /A  /B /C /D
+/E /F /G /H /I /J /K  /L /M  /N /O  /P /Q  /R /S  /T /U  /V /W  /X /Y /Z
+/bracketleft /backslash     /bracketright    /asciicircum    /underscore
+/quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o  /p /q  /r /s /t
+/u /v  /w  /x  /y  /z  /braceleft /bar  /braceright /asciitilde /.notdef
+/dotlessi /dieresis/ring    /grave   /acute    /circumflex/tilde /macron
+/brev  /dotaccent /cedilla /.notdef /.notdef  /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef  /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef  /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /endash /registered 
+/macron /degree /plusminus /twosuperior /threesuperior /acute /mu
+/paragraph /bullet /cedilla /onesuperior /ordmasculine /guillemotright
+/onequarter /onehalf /threequarters /questiondown /Agrave /Aacute /Acircumflex
+/Atilde /Adieresis /Aring /AE /Ccedilla /Egrave /Eacute /Ecircumflex
+/Edieresis /Igrave /Iacute /Icircumflex /Idieresis /Eth /Ntilde
+/Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply /Oslash /Ugrave
+/Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls /agrave
+/aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla /egrave
+/eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis
+/divide /oslash /ugrave /uacute /ucircumflex /udieresis /yacute
+/thorn /ydieresis ] def
+/SetUpFonts
+ {dup/$fd exch array def{
+     findfont dup maxlength dict begin
+	{ 1 index /FID ne { def } { pop pop } ifelse } forall
+	/Encoding ISO-Latin-1 def
+	/FontName /Null def
+	FontName currentdict definefont
+     end
+     exch scalefont $fd 3 1 roll put}repeat}def
+
+/InitGaudy{/TwoColumn exch def /BarLength exch def
+ /ftD /Times-Bold findfont 12 UP scalefont def
+ /ftF /Times-Roman findfont 14 UP scalefont def
+ /ftP /Helvetica-Bold findfont 30 UP scalefont def}def
+/U{1440 mul}def
+/UP{U 72 div}def
+/LB{/pts exch UP def /charcolor exch def /boxcolor exch def /font exch def
+ /label exch def /dy exch def /dx exch def /lly exch def /llx exch def
+ gsave boxcolor setgray
+ llx lly moveto dx 0 rlineto 0 dy rlineto dx neg 0 rlineto closepath fill
+ /lines label length def
+ /yp lly dy add dy lines pts mul sub 2 div sub pts .85 mul sub def
+ font setfont charcolor setgray
+ label {dup stringwidth pop 2 div llx dx 2 div add exch sub yp moveto show
+   /yp yp pts sub def}forall grestore}def
+/Gaudy{/Page exch def /Date exch def /File exch def /Comment exch def
+ .25 U 10.2 U BarLength .1 sub U .25 U [File] ftF .97 0 14 LB
+ .25 U 10.45 U BarLength .1 sub U .25 U [Comment] ftF 1 0 14 LB
+ .25 U 10.2 U 1 U .5 U Date ftD .7 0 12 LB
+ BarLength .75 sub U 10.2 U 1 U .5 U [Page] ftP .7 1 30 LB
+ TwoColumn{BarLength 2 div .19 add U 10.2 U moveto 0 -10 U rlineto stroke}if
+}def
+end
+StartEnscriptDoc % end fixed prolog
+1 200 /Courier-Bold
+0 140 /Courier
+2 SetUpFonts
+%%EndProlog
+%%Page: ? 1
+StartPage
+Landscape
+1 F
+360 14790 (tconst.LST        Mon Feb  7 13:16:44 1994        1)B
+0 F
+7920 14470(ASxxxx Assembler V01.50  \(Zilog Z80 / Hitachi HD64180\), page 1.)B
+7920 14310(Assembler Link Test Constants)B
+10440 13830(1 )B
+672(.title)X
+168(Assembler Link Test Constants)X
+10440 13670(2 )B
+10440 13510(3 )B
+672(.module)X
+84(tconst)X
+10440 13350(4 )B
+10440 13190(5 )B
+672(.area)X
+252(TEST)X
+336(\(ABS,OVR\))X
+10440 13030(6 )B
+8172 12870(0000                       7 )B
+672(bra1)X
+336(==)X
+504(0)X
+588(; branching constants)X
+8172 12710(0080                       8 )B
+672(bra2)X
+336(==)X
+504(0x80)X
+8172 12550(0182                       9 )B
+672(bra3)X
+336(==)X
+504(0x182)X
+8172 12390(0204                      10 )B
+672(bra4)X
+336(==)X
+504(0x204)X
+10356 12230(11 )B
+8172 12070(0000                      12 )B
+672(.blkb)X
+252(0x7E)X
+1008(;bra1:)X
+8172 11910(007E                      13 )B
+672(.blkb)X
+252(0x02)X
+8172 11750(0080                      14 )B
+672(.blkb)X
+252(0x7F)X
+1008(;bra2:)X
+8172 11590(00FF                      15 )B
+672(.blkb)X
+252(0x02)X
+8172 11430(0101                      16 )B
+672(.blkb)X
+252(0x02)X
+8172 11270(0103                      17 )B
+672(.blkb)X
+252(0x7F)X
+8172 11110(0182                      18 )B
+672(.blkb)X
+252(0x00)X
+1008(;bra3:)X
+8172 10950(0182                      19 )B
+672(.blkb)X
+252(0x02)X
+8172 10790(0184                      20 )B
+672(.blkb)X
+252(0x80)X
+8172 10630(0204                      21 )B
+672(.blkb)X
+252(0x00)X
+1008(;bra4:)X
+10356 10470(22 )B
+10356 10310(23 )B
+672(.globl)X
+168(bra5,bra6,bra7,bra8)X
+10356 10150(24 )B
+10356 9990(25 )B
+2688(; branching labels)X
+8172 9830(0204                      26 bra5:)B
+252(.blkb)X
+252(0x7E)X
+1008(;bra5:)X
+8172 9670(0282                      27 )B
+672(.blkb)X
+252(0x02)X
+8172 9510(0284                      28 bra6:)B
+252(.blkb)X
+252(0x7F)X
+1008(;bra6:)X
+8172 9350(0303                      29 )B
+672(.blkb)X
+252(0x02)X
+8172 9190(0305                      30 )B
+672(.blkb)X
+252(0x02)X
+8172 9030(0307                      31 )B
+672(.blkb)X
+252(0x7F)X
+8172 8870(0386                      32 bra7:)B
+252(.blkb)X
+252(0x00)X
+1008(;bra7:)X
+8172 8710(0386                      33 )B
+672(.blkb)X
+252(0x02)X
+8172 8550(0388                      34 )B
+672(.blkb)X
+252(0x80)X
+8172 8390(0408                      35 bra8:)B
+252(.blkb)X
+252(0x00)X
+1008(;bra8:)X
+10356 8230(36 )B
+10356 8070(37 )B
+10356 7910(38 )B
+672(; 12-Bit numbers are considered valid if:)X
+10356 7750(39 )B
+672(;   1\) the most significant 4 bits of the 16-bit )X
+7920 7590(number are zero)B
+10356 7430(40 )B
+672(;   2\) the most significant 4 bits of the 16-bit )X
+7920 7270(number are all ones)B
+10356 7110(41 )B
+8172 6950(0FFF                      42 )B
+672(n0FFF)X
+252(==)X
+504(0x0FFF)X
+168(;largest positive)X
+8172 6790(1000                      43 )B
+672(n1000)X
+252(==)X
+504(0x1000)X
+168(;+1)X
+10356 6630(44 )B
+8172 6470(F000                      45 )B
+672(nF000)X
+252(==)X
+504(0xF000)X
+168(;largest negative)X
+8172 6310(EFFF                      46 )B
+672(nEFFF)X
+252(==)X
+504(0xEFFF)X
+168(;-1)X
+10356 6150(47 )B
+10356 5990(48 )B
+10356 5830(49 )B
+672(.area)X
+252(DIRECT)X
+168(\(ABS,OVR\))X
+7920 5670(o  0000                      50 )B
+672(.setdp)X
+168(0,DIRECT)X
+10356 5510(51 )B
+8172 5350(0101                      52 )B
+672(boundary)X
+672(==)X
+504(0x101)X
+10356 5190(53 )B
+8172 5030(FFFFFFFF                      54 )B
+336(minus1)X
+168(==)X
+504(-1)X
+504(; paging / indexing const)X
+7920 4870(ants)B
+8172 4710(0000                      55 )B
+672(zero)X
+336(==)X
+504(0)X
+8172 4550(00FF                      56 )B
+672(two55)X
+252(==)X
+504(0d255)X
+EndPage
+%%Page: ? 2
+StartPage
+Landscape
+1 F
+360 14790 (tconst.LST        Mon Feb  7 13:16:44 1994        2)B
+0 F
+360 14470(ASxxxx Assembler V01.50  \(Zilog Z80 / Hitachi HD64180\), page 2.)B
+360 14310(Assembler Link Test Constants)B
+612 13830(0100                      57 )B
+672(two56)X
+252(==)X
+504(0d256)X
+612 13670(01FF                      58 )B
+672(five11)X
+168(==)X
+504(0d511)X
+612 13510(0200                      59 )B
+672(five12)X
+168(==)X
+504(0d512)X
+2796 13350(60 )B
+2796 13190(61 )B
+2796 13030(62 )B
+672(.globl)X
+168(lzero,ltwo55,ltwo56,lminus1)X
+2796 12870(63 )B
+612 12710(0000                      64 lzero:)B
+168(.blkb)X
+252(0x00FF)X
+840(; paging labels)X
+612 12550(00FF                      65 ltwo55:)B
+84(.blkb)X
+252(0x0001)X
+612 12390(0100                      66 ltwo56:)B
+84(.blkb)X
+252(0xFEFF)X
+612 12230(FFFF                      67 lminus1:.blkb)B
+252(0d0000)X
+7920 14470(ASxxxx Assembler V01.50  \(Zilog Z80 / Hitachi HD64180\), page 3.)B
+7920 14310(Assembler Link Test Constants)B
+7920 14150(Symbol Table)B
+8256 13830(boundary=  0101 G   |     bra1    =  0000 G   |     bra2    =  0080 G)B
+8256 13670(bra3    =  0182 G   |     bra4    =  0204 G   |   1 bra5       0204 GR)B
+8088 13510(1 bra6       0284 GR  |   1 bra7       0386 GR  |   1 bra8       0408 GR)B
+8256 13350(five11  =  01FF G   |     five12  =  0200 G   |   2 lminus1    FFFF GR)B
+8088 13190(2 ltwo55     00FF GR  |   2 ltwo56     0100 GR  |   2 lzero      0000 GR)B
+8256 13030(minus1  =  FFFFFFFF G   |     n0FFF   =  0FFF G   |     n1000   =  1000 G)B
+8256 12870(nEFFF   =  EFFF G   |     nF000   =  F000 G   |     two55   =  00FF G)B
+8256 12710(two56   =  0100 G   |     zero    =  0000 G)B
+EndPage
+%%Page: ? 3
+StartPage
+Landscape
+1 F
+360 14790 (tconst.LST        Mon Feb  7 13:16:44 1994        3)B
+0 F
+360 14470(ASxxxx Assembler V01.50  \(Zilog Z80 / Hitachi HD64180\), page 4.)B
+360 14310(Assembler Link Test Constants)B
+360 14150(Area Table)B
+612 13830(0 _CODE      size    0   flags 0)B
+612 13670(1 TEST       size  408   flags C)B
+612 13510(2 DIRECT     size FFFF   flags C)B
+EndPage
+%%Page: ? 4
+StartPage
+Landscape
+1 F
+360 14790 (tz80l.LST        Mon Feb  7 13:14:17 1994        1)B
+0 F
+7920 14470(ASxxxx Assembler V01.50  \(Zilog Z80 / Hitachi HD64180\), page 1.)B
+7920 14150(Assembler Link Tests)B
+10440 13830(1 )B
+672(.sbttl)X
+168(Assembler Link Tests)X
+10440 13670(2 )B
+10440 13510(3 )B
+672(.module)X
+84(tz80l)X
+10440 13350(4 )B
+10440 13190(5 )B
+672(; This file and TCONST.ASM should be assembled an)X
+7920 13030(d linked.)B
+10440 12870(6 )B
+672(;)X
+10440 12710(7 )B
+672(; ASZ80 -XGOL TZ80L)X
+10440 12550(8 )B
+672(; ASZ80 -XGOL TCONST)X
+10440 12390(9 )B
+672(;)X
+10356 12230(10 )B
+672(; ASLINK -C)X
+10356 12070(11 )B
+672(; -XMS)X
+10356 11910(12 )B
+672(; TZ80L)X
+10356 11750(13 )B
+672(; TCONST)X
+10356 11590(14 )B
+672(; -E)X
+10356 11430(15 )B
+672(;)X
+10356 11270(16 )B
+672(; The following tests verify the correct processi)X
+7920 11110(ng of)B
+10356 10950(17 )B
+672(; external references for the branches.)X
+10356 10790(18 )B
+672(;)X
+10356 10630(19 )B
+672(; *L signifies an error will be reported at link )X
+7920 10470(time.)B
+10356 10310(20 )B
+10356 10150(21 )B
+672(; branch test must be first)X
+10356 9990(22 )B
+10356 9830(23 )B
+672(.area)X
+252(TEST)X
+336(\(ABS,OVR\))X
+10356 9670(24 )B
+8172 9510(0000                      25 )B
+672(.blkb)X
+252(0x7E)X
+1008(;bra1:)X
+8172 9350(007E 38 00                26 )B
+672(jr)X
+504(C,bra1)X
+840(;   38 00  [38 80])X
+8172 9190(0080                      27 )B
+672(.blkb)X
+252(0x7F)X
+1008(;bra2:)X
+8172 9030(00FF 38 00                28 )B
+672(jr)X
+504(C,bra2)X
+840(;*L 38 00  [38 7F])X
+8172 8870(0101 38 00                29 )B
+672(jr)X
+504(C,bra3)X
+840(;   38 00  [38 7F])X
+8172 8710(0103                      30 )B
+672(.blkb)X
+252(0x7F)X
+8172 8550(0182                      31 )B
+672(.blkb)X
+252(0x00)X
+1008(;bra3:)X
+8172 8390(0182 38 00                32 )B
+672(jr)X
+504(C,bra4)X
+840(;*L 38 00  [38 [80])X
+8172 8230(0184                      33 )B
+672(.blkb)X
+252(0x80)X
+8172 8070(0204                      34 )B
+672(.blkb)X
+252(0x00)X
+1008(;bra4:)X
+10356 7910(35 )B
+8172 7750(0204                      36 )B
+672(.blkb)X
+252(0x7E)X
+1008(;bra5:)X
+8172 7590(0282 38 00                37 )B
+672(jr)X
+504(C,bra5)X
+840(;   38 00  [38 80])X
+8172 7430(0284                      38 )B
+672(.blkb)X
+252(0x7F)X
+1008(;bra6:)X
+8172 7270(0303 38 00                39 )B
+672(jr)X
+504(C,bra6)X
+840(;*L 38 00  [38 7F])X
+8172 7110(0305 38 00                40 )B
+672(jr)X
+504(C,bra7)X
+840(;   38 00  [38 7F])X
+8172 6950(0307                      41 )B
+672(.blkb)X
+252(0x7F)X
+8172 6790(0386                      42 )B
+672(.blkb)X
+252(0x00)X
+1008(;bra7:)X
+8172 6630(0386 38 00                43 )B
+672(jr)X
+504(C,bra8)X
+840(;*L 38 00  [38 [80])X
+8172 6470(0388                      44 )B
+672(.blkb)X
+252(0x80)X
+8172 6310(0408                      45 )B
+672(.blkb)X
+252(0x00)X
+1008(;bra8:)X
+10356 6150(46 )B
+EndPage
+%%Page: ? 5
+StartPage
+Landscape
+1 F
+360 14790 (tz80l.LST        Mon Feb  7 13:14:17 1994        2)B
+0 F
+360 14470(ASxxxx Assembler V01.50  \(Zilog Z80 / Hitachi HD64180\), page 2.)B
+360 14150(Symbol Table)B
+696 13830(bra1       **** GX  |     bra2       **** GX  |     bra3       **** GX)B
+696 13670(bra4       **** GX  |     bra5       **** GX  |     bra6       **** GX)B
+696 13510(bra7       **** GX  |     bra8       **** GX)B
+7920 14470(ASxxxx Assembler V01.50  \(Zilog Z80 / Hitachi HD64180\), page 3.)B
+7920 14150(Area Table)B
+8172 13830(0 _CODE      size    0   flags 0)B
+8172 13670(1 TEST       size  408   flags C)B
+EndPage
+%%Page: ? 6
+StartPage
+Landscape
+1 F
+360 14790 (tconst.REL        Mon Feb  7 13:16:44 1994        1)B
+0 F
+360 14470(XL)B
+360 14310(H 3 areas 17 global symbols)B
+360 14150(M tconst)B
+360 13990(S zero Def0000)B
+360 13830(S two55 Def00FF)B
+360 13670(S nF000 DefF000)B
+360 13510(S two56 Def0100)B
+360 13350(S nEFFF DefEFFF)B
+360 13190(S five11 Def01FF)B
+360 13030(S five12 Def0200)B
+360 12870(S minus1 DefFFFFFFFF)B
+360 12710(S boundary Def0101)B
+360 12550(S bra1 Def0000)B
+360 12390(S bra2 Def0080)B
+360 12230(S bra3 Def0182)B
+360 12070(S bra4 Def0204)B
+360 11910(S n1000 Def1000)B
+360 11750(S n0FFF Def0FFF)B
+360 11590(A _CODE size 0 flags 0)B
+360 11430(A TEST size 408 flags C)B
+360 11270(S bra5 Def0204)B
+360 11110(S bra6 Def0284)B
+360 10950(S bra7 Def0386)B
+360 10790(S bra8 Def0408)B
+360 10630(A DIRECT size FFFF flags C)B
+360 10470(S lminus1 DefFFFF)B
+360 10310(S lzero Def0000)B
+360 10150(S ltwo55 Def00FF)B
+360 9990(S ltwo56 Def0100)B
+EndPage
+%%Page: ? 7
+StartPage
+Landscape
+1 F
+360 14790 (tz80l.REL        Mon Feb  7 13:14:17 1994        1)B
+0 F
+360 14470(XL)B
+360 14310(H 2 areas 8 global symbols)B
+360 14150(M tz80l)B
+360 13990(S bra1 Ref0000)B
+360 13830(S bra2 Ref0000)B
+360 13670(S bra3 Ref0000)B
+360 13510(S bra4 Ref0000)B
+360 13350(S bra5 Ref0000)B
+360 13190(S bra6 Ref0000)B
+360 13030(S bra7 Ref0000)B
+360 12870(S bra8 Ref0000)B
+360 12710(A _CODE size 0 flags 0)B
+360 12550(A TEST size 408 flags C)B
+360 12390(T 7E 00 38 00 00)B
+360 12230(R 00 00 01 00 0F 03 00 00)B
+360 12070(T FF 00 38 00 00 38 00 00)B
+360 11910(R 00 00 01 00 0F 03 01 00 0F 06 02 00)B
+360 11750(T 82 01 38 00 00)B
+360 11590(R 00 00 01 00 0F 03 03 00)B
+360 11430(T 82 02 38 00 00)B
+360 11270(R 00 00 01 00 0F 03 04 00)B
+360 11110(T 03 03 38 00 00 38 00 00)B
+360 10950(R 00 00 01 00 0F 03 05 00 0F 06 06 00)B
+360 10790(T 86 03 38 00 00)B
+360 10630(R 00 00 01 00 0F 03 07 00)B
+EndPage
+%%Page: ? 8
+StartPage
+Landscape
+1 F
+360 14790 (tz80l.MAP        Mon Feb  7 13:24:41 1994        1)B
+0 F
+7920 14470(ASxxxx Linker V01.50,  page 1.)B
+7920 14310(Hexidecimal)B
+7920 13990(Area       Addr   Size   Decimal Bytes \(Attributes\))B
+8424 13830(Value--Global      Value--Global      Value--Global      Value--Global)B
+7920 13350(.  .ABS.   0000   0000 =      0. bytes \(ABS,OVR\))B
+8508 13190(0000  zero     |   0000  bra1     |   0080  bra2     |   00FF  two55   )B
+8508 13030(0100  two56    |   0101  boundary |   0182  bra3     |   01FF  five11  )B
+8508 12870(0200  five12   |   0204  bra4     |   0FFF  n0FFF    |   1000  n1000   )B
+8508 12710(EFFF  nEFFF    |   F000  nF000    |   FFFFFFFF  minus1  )B
+7920 12390(_CODE      0000   0000 =      0. bytes \(REL,CON\))B
+7920 12070(TEST       0000   0408 =   1032. bytes \(ABS,OVR\))B
+8508 11910(0204  bra5     |   0284  bra6     |   0386  bra7     |   0408  bra8    )B
+7920 11590(DIRECT     0000   FFFF =  65535. bytes \(ABS,OVR\))B
+8508 11430(0000  lzero    |   00FF  ltwo55   |   0100  ltwo56   |   FFFF  lminus1 )B
+EndPage
+%%Page: ? 9
+StartPage
+Landscape
+1 F
+360 14790 (tz80l.MAP        Mon Feb  7 13:24:41 1994        2)B
+0 F
+360 14470(ASxxxx Linker V01.50,  page 2.)B
+360 14150(Files Linked      [ module\(s\) ])B
+360 13830(tz80l             [    tz80l ])B
+360 13670(tconst            [   tconst ])B
+7920 14310(?ASlink-W-Byte PCR relocation error for symbol  bra2)B
+8676 14150(file        module      area        offset)B
+8088 13990(Refby  tz80l       tz80l       TEST        00FE)B
+8088 13830(Defin  tconst      tconst      .  .ABS.    0080)B
+7920 13510(?ASlink-W-Byte PCR relocation error for symbol  bra4)B
+8676 13350(file        module      area        offset)B
+8088 13190(Refby  tz80l       tz80l       TEST        0181)B
+8088 13030(Defin  tconst      tconst      .  .ABS.    0204)B
+7920 12710(?ASlink-W-Byte PCR relocation error for symbol  bra6)B
+8676 12550(file        module      area        offset)B
+8088 12390(Refby  tz80l       tz80l       TEST        0302)B
+8088 12230(Defin  tconst      tconst      TEST        0284)B
+7920 11910(?ASlink-W-Byte PCR relocation error for symbol  bra8)B
+8676 11750(file        module      area        offset)B
+8088 11590(Refby  tz80l       tz80l       TEST        0385)B
+8088 11430(Defin  tconst      tconst      TEST        0408)B
+EndPage
+%%Trailer
+EndEnscriptDoc
+EnscriptJob restore

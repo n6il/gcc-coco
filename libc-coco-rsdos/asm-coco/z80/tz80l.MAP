@@ -1,0 +1,37 @@
+ASxxxx Linker V01.50,  page 1.
+Hexidecimal
+
+Area       Addr   Size   Decimal Bytes (Attributes)
+      Value--Global      Value--Global      Value--Global      Value--Global
+
+
+.  .ABS.   0000   0000 =      0. bytes (ABS,OVR)
+       0000  zero     |   0000  bra1     |   0080  bra2     |   00FF  two55   
+       0100  two56    |   0101  boundary |   0182  bra3     |   01FF  five11  
+       0200  five12   |   0204  bra4     |   0FFF  n0FFF    |   1000  n1000   
+       EFFF  nEFFF    |   F000  nF000    |   FFFFFFFF  minus1  
+
+_CODE      0000   0000 =      0. bytes (REL,CON)
+
+TEST       0000   0409 =   1033. bytes (ABS,OVR)
+       0204  bra5     |   0284  bra6     |   0386  bra7     |   0408  bra8    
+
+DIRECT     0000   FFFF =  65535. bytes (ABS,OVR)
+       0000  lzero    |   00FF  ltwo55   |   0100  ltwo56   |   FFFF  lminus1 
+ASxxxx Linker V01.50,  page 2.
+
+Files Linked      [ module(s) ]
+
+tz80l             [    tz80l ]
+tconst            [   tconst ]
+
+
+?ASlink-W-Byte PCR relocation error for symbol  bra5
+         file        module      area        offset
+  Refby  tz80l       tz80l       TEST        0282
+  Defin  tconst      tconst      TEST        0204
+
+?ASlink-W-Byte PCR relocation error for symbol  bra6
+         file        module      area        offset
+  Refby  tz80l       tz80l       TEST        0303
+  Defin  tconst      tconst      TEST        0284

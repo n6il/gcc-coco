@@ -1,0 +1,44 @@
+I again extended the linker to natively support the Thomson BIN format.
+
+It is now a multiple-pass linker (originally 2-pass linker):
+- the first pass always collects the informations about areas and symbols,
+  but now flags the areas as being instantiated (at least one byte of code
+  from the object files belongs to it) or not.
+- relocation is performed by the subsequent passes, one area per pass; only
+  the instantiated areas are taken into account.
+
+Thus the number of passes is exactly n+1, where n is the number of
+instantiated areas. For a typical C program with the three standard areas
+(_CODE, _DATA, _BSS), this means 4 passes.
+
+If you encounter any problems, please contact me at
+ebotcazou@libertysurf.fr
+
+Have fun,
+Eric Botcazou.
+
+========================================================================
+
+While working on gcc6809 I extended the linker.
+Now you can use libraries.
+
+The style is just like gcc:
+
+-lc		adds libc.a to the executable
+-Llibrarypath	determines the search path for the libs.
+
+
+The format of such a library is much the same as the object format.
+It is just extended with a L line which precedes and follows a single
+module in a lib.
+The order of modules and symbols in a lib doesn't matter since 
+the library is read in again and again until no new modules 
+are imported. 
+You can even link a library multiple times to a object file
+without causing any harm. GCC does this with libgcc.a.
+
+If you encounter any problems, please contact me at
+Matthias.Doerfel@informatik.uni-erlangen.de
+
+Have fun,
+Matthias.

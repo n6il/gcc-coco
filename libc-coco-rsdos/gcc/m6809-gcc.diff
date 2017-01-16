@@ -1,0 +1,75 @@
+diff -ur orig/gcc-3.1.1/config.sub gcc-3.1.1/config.sub
+--- orig/gcc-3.1.1/config.sub	Fri Feb  8 22:00:13 2002
++++ gcc-3.1.1/config.sub	Sun Mar  2 10:15:27 2003
+@@ -218,6 +218,10 @@
+ 		basic_machine=m68k-atari
+ 		os=-mint
+ 		;;
++	-rsdos)
++		os=-rsdos
++		basic_machine=m6809-coco
++		;;
+ esac
+ 
+ # Decode aliases for certain CPU-COMPANY combinations.
+@@ -234,7 +238,7 @@
+ 	| fr30 \
+ 	| h8300 | h8500 | hppa | hppa1.[01] | hppa2.0 | hppa2.0[nw] | hppa64 \
+ 	| i370 | i860 | i960 | ia64 \
+-	| m32r | m68000 | m68k | m88k | mcore \
++	| m32r | m68000 | m68k | m88k | m6809 | mcore \
+ 	| mips16 | mips64 | mips64el | mips64orion | mips64orionel \
+ 	| mips64vr4100 | mips64vr4100el | mips64vr4300 \
+ 	| mips64vr4300el | mips64vr5000 | mips64vr5000el \
+@@ -294,7 +298,7 @@
+ 	| i*86-* | i860-* | i960-* | ia64-* \
+ 	| m32r-* \
+ 	| m68000-* | m680[01234]0-* | m68360-* | m683?2-* | m68k-* \
+-	| m88110-* | m88k-* | mcore-* \
++	| m88110-* | m88k-* | m6809-* | mcore-* \
+ 	| mips-* | mips16-* | mips64-* | mips64el-* | mips64orion-* \
+ 	| mips64orionel-* | mips64vr4100-* | mips64vr4100el-* \
+ 	| mips64vr4300-* | mips64vr4300el-* | mipsbe-* | mipseb-* \
+@@ -377,6 +381,9 @@
+ 		basic_machine=ns32k-sequent
+ 		os=-dynix
+ 		;;
++	coco)
++		basic_machine=m6809-coco
++		;;
+ 	convex-c1)
+ 		basic_machine=c1-convex
+ 		os=-bsd
+@@ -1100,7 +1107,8 @@
+ 	      | -interix* | -uwin* | -rhapsody* | -darwin* | -opened* \
+ 	      | -openstep* | -oskit* | -conix* | -pw32* | -nonstopux* \
+ 	      | -storm-chaos* | -tops10* | -tenex* | -tops20* | -its* \
+-	      | -os2* | -vos* | -palmos* | -uclinux* | -nucleus* | -morphos*)
++	      | -os2* | -vos* | -palmos* | -uclinux* | -nucleus* | -morphos* \
++	      | -rsdos )
+ 	# Remember, each alternative MUST END IN *, to match a version number.
+ 		;;
+ 	-qnx*)
+diff -ur orig/gcc-3.1.1/gcc/config.gcc gcc-3.1.1/gcc/config.gcc
+--- orig/gcc-3.1.1/gcc/config.gcc	Fri Jun  7 19:35:31 2002
++++ gcc-3.1.1/gcc/config.gcc	Sat Mar  1 23:41:24 2003
+@@ -247,6 +247,7 @@
+ 	| m68[k0]*-next-* \
+ 	| m68[k0]*-sony-* \
+ 	| m88k-* \
++	| m6809-* \
+ 	| mips-*-bsd* \
+ 	| mips-*-riscos* \
+ 	| mips-*-sysv* \
+@@ -2201,6 +2202,11 @@
+ 	tm_file="dbxelf.h elfos.h svr4.h m88k/sysv4.h"
+ 	extra_parts="crtbegin.o crtend.o"
+ 	tmake_file=m88k/t-sysv4
++	;;
++m6809-*-*)
++	;;
++m6809-coco-rsdos)
++	tm_file="${tm_file} m6809/coco.h"
+ 	;;
+ mcore-*-elf)
+ 	tm_file="dbxelf.h elfos.h svr4.h ${tm_file} mcore/mcore-elf.h"

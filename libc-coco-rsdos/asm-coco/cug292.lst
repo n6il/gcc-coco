@@ -1,0 +1,147 @@
+$ ftp shop-pdp.kent.edu
+Connected to shop-pdp.kent.edu.
+220-RFTP-11   V01.22  11-Dec-1992
+    Remote FTP Server shop-pdp.kent.edu [131.123.1.153]
+    No RFTP Message File
+220 Server Ready
+Name (shop-pdp.kent.edu:): anonymous
+331 Password required for user anonymous
+Password:
+230-Logged into Default Directory - du3:
+230-Message to User anonymous
+
+    This is a LSI-11/73 computer with 2 meg of memory,
+    155 megabytes of disk space partitioned as 5 DU type
+    drives, and a floating point coprocessor.
+
+    The operating system is TSX+ Version = 6.40
+
+    The anonymous users directories are physical devices
+    du3: and du4:.  The directories are accessed using
+    'cd du3:' or 'cd du4:'.  The subdirectories are the
+    files with the extention '.dsk' and may be accessed
+    using 'cd /subdir'.
+
+    The FTP command 'remotehelp' will provide additional
+    information about the file structure and a list of the
+    accessable subdirectories.
+
+ftp> ls
+150 Opening an ASCII data connection for *.*
+
+      110663.dsk    520        110918.dsk   3000        110932.dsk   1000
+      cug292.dsk   3000        cug346.dsk   1350        110939.dsk   6000
+      readme.txt      6
+
+Directory [du3:*.*] / 7 Files / 14876 Blocks
+
+226 Transfer complete
+ftp> cd cug292
+250 Directory is du3:/cug292
+ftp> ls
+150 Opening an ASCII data connection for *.*
+
+      asxxxx.get      6        asxxxx.bug      7        ascis .mod      2
+      pcdsk1.dsk    650        pcdsk2.dsk    650        pcdsk3.dsk    650
+      pcdsk4.dsk    650
+
+Directory [du3:/cug292/*.*] / 7 Files / 2615 Blocks
+
+226 Transfer complete
+ftp> cd pcdsk1
+250 Directory is du3:/cug292/pcdsk1
+ftp> ls
+150 Opening an ASCII data connection for *.*
+
+      m00ext.c        1        m00pst.c       11        m00adr.c        5
+      m00mch.c        7        m6800 .h        3        as6800.cmp      1
+      as6800.lnk      1        as6800.bld      3        as6800.prj      1
+      bldm00.ac       1        lnkm00.ac       1        t6800 .asm     15
+      t6800e.asm      2        t6800l.asm      4        t6800s.asm     10
+      m01ext.c        1        m01pst.c       13        m01adr.c        5
+      m01mch.c        9        m6801 .h        3        as6801.cmp      1
+      as6801.lnk      1        as6801.bld      3        as6801.prj      1
+      bldm01.ac       1        lnkm01.ac       1        t6801 .asm     18
+      t6801e.asm      2        t6801l.asm      4        t6801s.asm     10
+      m09ext.c        1        m09pst.c       17        m09adr.c        9
+      m09mch.c       14        m6809 .h        5        as6809.cmp      1
+      as6809.lnk      1        as6809.bld      3        as6809.prj      1
+      bldm09.ac       1        lnkm09.ac       1        t6809 .asm     39
+      t6809e.asm      5        t6809l.asm      5        m11ext.c        1
+      m11pst.c       14        m11adr.c        6        m11mch.c       12
+      m6811 .h        3        as6811.cmp      1        as6811.lnk      1
+      as6811.bld      3        as6811.prj      1        bldm11.ac       1
+      lnkm11.ac       1        t6811 .asm     33        t6811e.asm      1
+      t6811l.asm      4        t6811s.asm     13        z80ext.c        1
+      z80pst.c        8        z80adr.c        8        z80mch.c       19
+      z80   .h        5        asz80 .cmp      1        asz80 .lnk      1
+      asz80 .bld      3        asz80 .prj      1        bldz80.ac       1
+      lnkz80.ac       1        tz80  .asm     53        tz80l .asm      2
+      rx02  .d01      5
+
+Directory [du3:/cug292/pcdsk1/*.*] / 73 Files / 446 Blocks
+
+226 Transfer complete
+cd pcdsk2
+226 Transfer complete
+ftp> dir
+250 Directory is du3:/cug292/pcdsk2
+150 Opening an ASCII data connection for *.*
+
+      m04ext.c        1        m04pst.c        7        m04adr.c        4
+      m04mch.c        8        m6804 .h        3        as6804.cmp      1
+      as6804.lnk      1        as6804.bld      3        as6804.prj      1
+      bldm04.ac       1        lnkm04.ac       1        t6804l.asm      3
+      t6804s.asm     13        m05ext.c        1        m05pst.c        9
+      m05adr.c        5        m05mch.c        7        m6805 .h        3
+      as6805.cmp      1        as6805.lnk      1        as6805.bld      3
+      as6805.prj      1        bldm05.ac       1        lnkm05.ac       1
+      t6805l.asm      4        t6805s.asm     11        i85ext.c        1
+      i85pst.c        9        i85mch.c        5        i8085 .h        3
+      as8085.cmp      1        as8085.lnk      1        as8085.bld      3
+      as8085.prj      1        bldi85.ac       1        lnki85.ac       1
+      t8085 .asm      4        asmbt .com      1        asmb  .com      1
+      asmblr.cmp      2        bldasm.ac       1        asxxxx.cmp      1
+      asxxxx.lnk      1        string.h        1        alloc .h        1
+      asm   .h       17        asmtst.asm     11        tconst.asm      3
+      asdata.c        7        asout .c       15        aslex .c        4
+      aslist.c       15        asexpr.c       12        assubr.c        3
+      assym .c        8        asmain.c       21        xxxpst.c        3
+      rx02  .d02      4        abstra.doc      6        v01p50.doc      3
+      asmlnk.doc    287
+
+Directory [du3:/cug292/pcdsk2/*.*] / 61 Files / 553 Blocks
+
+226 Transfer complete
+ftp> cd pcdsk3
+250 Directory is du3:/cug292/pcdsk3
+ftp> dir
+150 Opening an ASCII data connection for *.*
+
+      ast09 .asm    100        mond09.asm    108        readme.asm      9
+      ast05 .asm     54        buf25 .asm    182        assist.txt      5
+      aslnk .com      1        aslnkc.com      1        aslnkf.com      1
+      aslink.lnk      1        aslink.bld      3        aslink.prj      1
+      lnklnk.ac       1        bldlnk.ac       1        aslnkc.ac       1
+      aslnkf.ac       1        aslink.h       15        lkarea.c        7
+      lkdata.c        6        lkeval.c        8        lkhead.c        3
+      lkihx .c        2        lklex .c        6        lkrloc.c       17
+      lks19 .c        2        lklist.c        8        lksym .c        9
+      lkmain.c       18        rx02  .d03      2
+
+Directory [du3:/cug292/pcdsk3/*.*] / 29 Files / 573 Blocks
+
+226 Transfer complete
+tp> dir
+150 Opening an ASCII data connection for *.*
+
+      aslink.exe     53        as6800.exe     63        as6801.exe     64
+      as6804.exe     61        as6805.exe     62        as6809.exe     69
+      as6811.exe     65        asz80 .exe     66        as8085.exe     60
+
+Directory [du3:/cug292/pcdsk4/*.*] / 9 Files / 563 Blocks
+
+226 Transfer complete
+ftp>
+
+

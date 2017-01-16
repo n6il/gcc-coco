@@ -1,0 +1,94 @@
+ASxxxx Assembler V01.50  (Zilog Z80 / Hitachi HD64180), page 1.
+Assembler Link Test Constants
+
+
+                              1 	.title	Assembler Link Test Constants
+                              2 
+                              3 	.module	tconst
+                              4 
+                              5 	.area	TEST	(ABS,OVR)
+                              6 
+   0000                       7 	bra1	==	0	; branching constants
+   0080                       8 	bra2	==	0x80
+   0182                       9 	bra3	==	0x182
+   0204                      10 	bra4	==	0x204
+                             11 
+   0000                      12 	.blkb	0x7E		;bra1:
+   007E                      13 	.blkb	0x02
+   0080                      14 	.blkb	0x7F		;bra2:
+   00FF                      15 	.blkb	0x02
+   0101                      16 	.blkb	0x02
+   0103                      17 	.blkb	0x7F
+   0182                      18 	.blkb	0x00		;bra3:
+   0182                      19 	.blkb	0x02
+   0184                      20 	.blkb	0x80
+   0204                      21 	.blkb	0x00		;bra4:
+                             22 
+                             23 	.globl	bra5,bra6,bra7,bra8
+                             24 
+                             25 				; branching labels
+   0204                      26 bra5:	.blkb	0x7E		;bra5:
+   0282                      27 	.blkb	0x02
+   0284                      28 bra6:	.blkb	0x7F		;bra6:
+   0303                      29 	.blkb	0x02
+   0305                      30 	.blkb	0x02
+   0307                      31 	.blkb	0x7F
+   0386                      32 bra7:	.blkb	0x00		;bra7:
+   0386                      33 	.blkb	0x02
+   0388                      34 	.blkb	0x80
+   0408                      35 bra8:	.blkb	0x00		;bra8:
+                             36 
+                             37 
+                             38 	; 12-Bit numbers are considered valid if:
+                             39 	;   1) the most significant 4 bits of the 16-bit number are zero
+                             40 	;   2) the most significant 4 bits of the 16-bit number are all ones
+                             41 
+   0FFF                      42 	n0FFF	==	0x0FFF	;largest positive
+   1000                      43 	n1000	==	0x1000	;+1
+                             44 
+   F000                      45 	nF000	==	0xF000	;largest negative
+   EFFF                      46 	nEFFF	==	0xEFFF	;-1
+                             47 
+                             48 
+                             49 	.area	DIRECT	(ABS,OVR)
+o  0000                      50 	.setdp	0,DIRECT
+                             51 
+   0101                      52 	boundary	==	0x101
+                             53 
+   FFFFFFFF                      54 	minus1	==	-1	; paging / indexing constants
+   0000                      55 	zero	==	0
+   00FF                      56 	two55	==	0d255
+ASxxxx Assembler V01.50  (Zilog Z80 / Hitachi HD64180), page 2.
+Assembler Link Test Constants
+
+
+   0100                      57 	two56	==	0d256
+   01FF                      58 	five11	==	0d511
+   0200                      59 	five12	==	0d512
+                             60 
+                             61 
+                             62 	.globl	lzero,ltwo55,ltwo56,lminus1
+                             63 
+   0000                      64 lzero:	.blkb	0x00FF		; paging labels
+   00FF                      65 ltwo55:	.blkb	0x0001
+   0100                      66 ltwo56:	.blkb	0xFEFF
+   FFFF                      67 lminus1:.blkb	0d0000
+ASxxxx Assembler V01.50  (Zilog Z80 / Hitachi HD64180), page 3.
+Assembler Link Test Constants
+Symbol Table
+
+    boundary=  0101 G   |     bra1    =  0000 G   |     bra2    =  0080 G
+    bra3    =  0182 G   |     bra4    =  0204 G   |   1 bra5       0204 GR
+  1 bra6       0284 GR  |   1 bra7       0386 GR  |   1 bra8       0408 GR
+    five11  =  01FF G   |     five12  =  0200 G   |   2 lminus1    FFFF GR
+  2 ltwo55     00FF GR  |   2 ltwo56     0100 GR  |   2 lzero      0000 GR
+    minus1  =  FFFFFFFF G   |     n0FFF   =  0FFF G   |     n1000   =  1000 G
+    nEFFF   =  EFFF G   |     nF000   =  F000 G   |     two55   =  00FF G
+    two56   =  0100 G   |     zero    =  0000 G
+ASxxxx Assembler V01.50  (Zilog Z80 / Hitachi HD64180), page 4.
+Assembler Link Test Constants
+Area Table
+
+   0 _CODE      size    0   flags 0
+   1 TEST       size  408   flags C
+   2 DIRECT     size FFFF   flags C

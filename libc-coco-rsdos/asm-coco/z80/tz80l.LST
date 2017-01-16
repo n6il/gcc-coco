@@ -1,0 +1,63 @@
+ASxxxx Assembler V01.50  (Zilog Z80 / Hitachi HD64180), page 1.
+
+Assembler Link Tests
+
+                              1 	.sbttl	Assembler Link Tests
+                              2 
+                              3 	.module	tz80l
+                              4 
+                              5 	; This file and TCONST.ASM should be assembled and linked.
+                              6 	;
+                              7 	; ASZ80 -XGOL TZ80L
+                              8 	; ASZ80 -XGOL TCONST
+                              9 	;
+                             10 	; ASLINK -C
+                             11 	; -XMS
+                             12 	; TZ80L
+                             13 	; TCONST
+                             14 	; -E
+                             15 	;
+                             16 	; The following tests verify the correct processing of
+                             17 	; external references for the branches.
+                             18 	;
+                             19 	; *L signifies an error will be reported at link time.
+                             20 
+                             21 	; branch test must be first
+                             22 
+                             23 	.area	TEST	(ABS,OVR)
+                             24 
+   0000                      25 	.blkb	0x7E		;bra1:
+   007E 38 00                26 	jr	C,bra1		;   38 00  [38 80]
+   0080                      27 	.blkb	0x7F		;bra2:
+   00FF DA 00 00             28 	jp	C,bra2		;*L 38 00  [38 7F]
+   0102 38 00                29 	jr	C,bra3		;   38 00  [38 7F]
+   0104                      30 	.blkb	0x7F
+   0183                      31 	.blkb	0x00		;bra3:
+   0183 38 00                32 	jr	C,bra4		;*L 38 00  [38 [80]
+   0185                      33 	.blkb	0x80
+   0205                      34 	.blkb	0x00		;bra4:
+                             35 
+   0205                      36 	.blkb	0x7E		;bra5:
+   0283 38 00                37 	jr	C,bra5		;   38 00  [38 80]
+   0285                      38 	.blkb	0x7F		;bra6:
+   0304 38 00                39 	jr	C,bra6		;*L 38 00  [38 7F]
+   0306 38 00                40 	jr	C,bra7		;   38 00  [38 7F]
+   0308                      41 	.blkb	0x7F
+   0387                      42 	.blkb	0x00		;bra7:
+   0387 38 00                43 	jr	C,bra8		;*L 38 00  [38 [80]
+   0389                      44 	.blkb	0x80
+   0409                      45 	.blkb	0x00		;bra8:
+                             46 
+ASxxxx Assembler V01.50  (Zilog Z80 / Hitachi HD64180), page 2.
+
+Symbol Table
+
+    bra1       **** GX  |     bra2       **** GX  |     bra3       **** GX
+    bra4       **** GX  |     bra5       **** GX  |     bra6       **** GX
+    bra7       **** GX  |     bra8       **** GX
+ASxxxx Assembler V01.50  (Zilog Z80 / Hitachi HD64180), page 3.
+
+Area Table
+
+   0 _CODE      size    0   flags 0
+   1 TEST       size  409   flags C

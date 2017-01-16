@@ -1,0 +1,29 @@
+XL
+H 3 areas 17 global symbols
+M tconst
+S zero Def0000
+S two55 Def00FF
+S nF000 DefF000
+S two56 Def0100
+S nEFFF DefEFFF
+S five11 Def01FF
+S five12 Def0200
+S minus1 DefFFFFFFFF
+S boundary Def0101
+S bra1 Def0000
+S bra2 Def0080
+S bra3 Def0182
+S bra4 Def0204
+S n1000 Def1000
+S n0FFF Def0FFF
+A _CODE size 0 flags 0
+A TEST size 408 flags C
+S bra5 Def0204
+S bra6 Def0284
+S bra7 Def0386
+S bra8 Def0408
+A DIRECT size FFFF flags C
+S lminus1 DefFFFF
+S lzero Def0000
+S ltwo55 Def00FF
+S ltwo56 Def0100

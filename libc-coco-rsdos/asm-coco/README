@@ -1,0 +1,4 @@
+The source for the linker and assembler were obtained from cher.media.mit.edu
+in /pub/incoming/xasm.tar.Z and/or /pub/incoming/cug292wk.zip. Rcs was used
+to have a history of any changes that were made for supporting the gcc
+compiler.
